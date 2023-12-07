@@ -24,3 +24,215 @@ body {
   padding: 2rem 5%;
   text-align: center;
 }
+
+.btn {
+  font: inherit;
+  padding: 0.5rem 1.5rem;
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-alt {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--primary);
+}
+
+.btn:hover {
+  background-color: var(--primary300);
+  border-color: var(--primary300);
+}
+
+.btn-alt:hover {
+  background-color: var(--white100);
+  border-color: transparent;
+}
+
+
+/* Overlays */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+#backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+
+@media (min-width: 48rem) {
+  .modal {
+    width: 40rem;
+  }
+}
+
+/* Game.css */
+#active-game {
+  text-align: center;
+  margin: 2rem 0 5rem 0; /* top right bottom left */
+  display: none;
+}
+
+#game-over {
+  width: 90%;
+  max-width: 40rem;
+  margin: 3rem auto;
+  padding: 1rem 2rem;
+  background-color: var(--primary);
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  display: none;
+}
+
+#game-over h2 {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+}
+
+#active-player-name {
+  font-weight: bold;
+  color: var(--black);
+}
+
+#game-board {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 6rem); /* 6rem 6rem 6rem */
+  grid-template-rows: repeat(3, 6rem); /* 6rem 6rem 6rem */
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+#game-board li {
+  background: var(--primary200);
+  color: var(--white);
+  border-radius: 2px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+#game-board li:hover {
+  background-color: var(--primary)
+}
+
+#game-board li.disabled {
+  background-color: var(--primary);
+  color: white;
+  cursor: default;
+}
+
+
+/* Configuration.css */
+#config-overlay {
+  text-align: center;
+}
+
+#config-overlay h2 {
+  margin: 0.5rem 0;
+}
+
+.error label {
+  color: rgb(136, 2, 2);
+}
+
+.error input {
+  border-color: rgb(136, 2, 2);
+  color: rgb(136, 2, 2);
+  background-color: rgb(253, 219, 219);
+}
+
+.form-control {
+  margin: 0.5rem 0;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-control input {
+  font: inherit;
+  border: 1px solid rgb(204, 204, 204);
+  width: 15rem;
+  padding: 0.35rem;
+}
+
+#game-configuration {
+  width: 90%;
+  max-width: 40rem;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+#game-configuration ol {
+  list-style: none;
+  margin: 3rem 0;
+  padding: 0;
+  display: flex;
+}
+
+#game-configuration li {
+  margin: 1rem;
+  padding: 1rem;
+  width: 50%;
+  background-color: var(--primary);
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+#game-configuration h2 {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: var(--white);
+}
+
+#game-configuration h3 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+  color: var(--white);
+}
+
+#game-configuration li button {
+  background: var(--white);
+  font: inherit;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid var(--white);
+  color: var(--primary);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#game-configuration li button:hover {
+  background-color: var(--white100);
+  border-color: var(--white100);
+}
+
+.player-symbol {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--white);
+  margin: 0.5rem 0;
+}
