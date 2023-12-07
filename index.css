@@ -6,3 +6,21 @@ body {
   background-color: #f5f5f5;
   text-align: center;
 }
+
+:root {
+  --primary: #1E43FF;
+  --primary200: #93bbfd;
+  --primary300: #2570eb;
+  --secondary: rgba(59, 130, 246, 0.1);
+  --tertiary: rgba(59, 130, 246, 0.2);
+  --white: #fff;
+  --white100: #efefef;
+  --black: #000;
+}
+
+#main-header {
+  background-color: var(--primary);
+  color: white;
+  padding: 2rem 5%;
+  text-align: center;
+}
